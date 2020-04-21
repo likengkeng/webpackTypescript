@@ -1,0 +1,7 @@
+dist
+logs/
+.vscode
+.idea
+node_modules/
+.npmrc
+.yarnrc

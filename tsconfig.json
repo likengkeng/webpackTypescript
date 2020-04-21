@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist",
+        "module": "es6",
+        "target": "es5", // 打包成es5
+        "allowJs": true, // 允许在ts中也能引入js的文件
+    },
+    "exclude": [
+        "node_modules",
+      ],
+      "include": [
+          "src/*.ts",
+          "src/**/*.ts",
+      ],
+    "compileOnSave": false
+}
