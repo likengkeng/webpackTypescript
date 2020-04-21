@@ -5,9 +5,16 @@ const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const AddAssetHtmlWebpackPlugin = require('add-asset-html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const CopyrightWebpackPlugin = require('../plugins/copyright-webpack-plugin.ts');
 
 // 存放公共插件
 const plugins = [
+    // 测试自定义插件
+    new CopyrightWebpackPlugin(
+        {
+            name: 'hurong Test' // 传递参数
+        }
+    ),
     // 开发环境和生产环境二者均需要的插件
     new HtmlWebpackPlugin({
       title: 'webpack4 实战',
