@@ -51,7 +51,20 @@ module.exports = {
             },
             {
                 test: /\.ts?$/,
-                use: ['ts-loader', 'eslint-loader'],
+                use: [
+                    {
+                        loader: path.resolve(__dirname, '../loaders/replaceLoader.ts'),
+                        options: {
+                            name: 'hurong test',
+                        }
+                    }, 
+                    { 
+                        loader: 'ts-loader'
+                    }, 
+                    {
+                        loader: 'eslint-loader'
+                    }
+                ],
                 exclude: /node_modules/
             }
         ]

@@ -13,3 +13,6 @@
 // let greeter = new Greeter('world');
 
 // alert(greeter.greet());
+
+let str = 'hello world';
+alert(str);
